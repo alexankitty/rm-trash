@@ -83,4 +83,23 @@ impl PrettyPrinter {
             },
         );
     }
+
+    pub fn print_action(
+        &self,
+        action: Option<&str>,
+        path: Option<&str>,
+        kind: Option<&str>,
+        error: Option<&str>,
+    ) {
+        self.print_template(
+            ACTION_TEMPLATE,
+            TemplateVars {
+                verb: Some(action.unwrap_or("").to_string()),
+                path: Some(path.unwrap_or("").to_string()),
+                kind: Some(kind.unwrap_or("").to_string()),
+                error: Some(error.unwrap_or("").to_string()),
+                ..Default::default()
+            },
+        );
+    }
 }

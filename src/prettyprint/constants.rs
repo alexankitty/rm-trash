@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 // Assembly info
 pub const VERSION: &str = "0.1.0";
 pub const AUTHOR: &str = "Alexankitty";
@@ -20,9 +18,9 @@ pub const KIND_SYMBOLIC_LINK: &str = "symbolic link";
 
 // Verbs
 pub const VERB_REMOVE: &str = "remove";
-pub const VERB_REMOVING: &str = "removing";
+pub const VERB_REMOVED: &str = "removed";
 pub const VERB_TRASH: &str = "trash";
-pub const VERB_TRASHING: &str = "trashing";
+pub const VERB_TRASHED: &str = "trashed";
 
 pub const VERB_DESCEND: &str = "descend into";
 pub const VERB_DESCENDING: &str = "descending into";
@@ -33,7 +31,6 @@ pub const ERROR_REASON_IS_DIR: &str = "is a directory";
 pub const ERROR_OPERAND: &str = "missing operand";
 
 // Strings
-// todo: formatting
 pub const HELP: &str = "--help' for more information.";
 pub const USAGE: &str = "[OPTIONS]... [FILE]...";
 pub const HELP_TEXT: &str = "
