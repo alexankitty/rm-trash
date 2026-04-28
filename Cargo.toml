@@ -1,0 +1,8 @@
+[package]
+name = "rm-trash"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+exitcode = "1.1.2"
+string-template-plus = "0.4.3"
