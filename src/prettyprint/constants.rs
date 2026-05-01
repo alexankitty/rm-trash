@@ -36,7 +36,10 @@ pub const USAGE: &str = "[OPTIONS]... [FILE]...";
 pub const HELP_TEXT: &str = "
 
     Argument compatible implementation of rm, but to your trash directory.
+    Behaviors are not identical to rm due to the trash directory implementation.
+    Some return codes may be different from rm.
 
+rm arguments:
     -f, --force
            ignore nonexistent files and arguments, never prompt
     -i
@@ -72,6 +75,16 @@ pub const HELP_TEXT: &str = "
            do not use the trash directory, remove files directly
         --dry-run
            do not remove files, just print what would be done
+
+trash management arguments:
+        --empty
+           empty the trash directory
+        --restore
+           restore files from the trash directory
+        --list
+           show the contents of the trash directory
+        --oprhans
+           show files missing a .trashinfo metadata file
 
 By default, rm does not remove directories.  Use the --recursive (-r or -R)
 option to remove each listed directory, too, along with all of its contents.

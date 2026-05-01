@@ -17,6 +17,7 @@ pub struct Options {
     pub dry_run: bool,
 }
 
+//todo: change this to be an argument registration system instead of being hardcoded like this
 pub fn parse_args() -> Options {
     let mut args = Options {
         recursive: false,

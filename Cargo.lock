@@ -231,6 +231,7 @@ checksum = "dc897dd8d9e8bd1ed8cdad82b5966c3e0ecae09fb1907d58efaa013543185d0a"
 name = "rm-trash"
 version = "0.1.0"
 dependencies = [
+ "chrono",
  "exitcode",
  "string-template-plus",
  "urlencoding",

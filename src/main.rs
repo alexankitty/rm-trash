@@ -1,5 +1,6 @@
 mod arguments;
 mod filehandler;
+mod mount;
 mod prettyprint;
 
 extern crate exitcode;
@@ -9,7 +10,7 @@ use crate::prettyprint::{constants::*, printer::PrettyPrinter};
 fn main() {
     let printer = PrettyPrinter::new();
     let options = arguments::parse_args();
-    let file_handler = filehandler::FileHandler::new();
+    let file_handler = filehandler::FileHandler::new(&printer);
     if options.verbose {
         println!("{:?}\n", options);
     }
